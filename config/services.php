@@ -13,6 +13,16 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+	'google' => [
+		'client_id' => env('GOOGLE_CLIENT_ID'),
+		'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+		'redirect' => env('GOOGLE_REDIRECT_URI'),
+	],
+	
+	'openai' => [
+		'key' => env('OPENAI_API_KEY'),
+	],
+
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
