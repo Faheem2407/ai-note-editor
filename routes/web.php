@@ -39,3 +39,4 @@ Route::middleware('auth')->group(function () {
 Route::post('/ai/summarize', [AIEnhancementController::class, 'summarize'])->name('ai.summarize');
 
 
+
