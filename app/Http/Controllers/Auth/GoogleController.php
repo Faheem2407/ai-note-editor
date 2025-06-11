@@ -31,14 +31,14 @@ class GoogleController extends Controller
                     'email' => $googleUser->getEmail(),
                     'google_id' => $googleUser->getId(),
                     'avatar' => $googleUser->getAvatar(),
-                    'password' => bcrypt(uniqid()), // Dummy password
+                    'password' => bcrypt(uniqid()),
                 ]);
             }
 
             // Log the user in
             Auth::login($user);
 
-            // Redirect to dashboard or home
+            // Redirect to dashboard
             return redirect('/dashboard');
         } catch (\Exception $e) {
             return redirect('/')->withErrors(['msg' => 'Google login failed. Please try again.']);
